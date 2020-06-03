@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,128 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Choose_Your_Side" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starWars" translatesAutoresizingMaskIntoConstraints="NO" id="8mt-CY-rZ8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-9s-zyh">
+                                <rect key="frame" x="41" y="287" width="332" height="59"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xu-f3-yej">
+                                <rect key="frame" x="41" y="373" width="141" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="rebel"/>
+                                <connections>
+                                    <segue destination="qh1-Dp-NRb" kind="presentation" identifier="lightSide" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Rj6-bO-R9L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtm-p9-bCy">
+                                <rect key="frame" x="242" y="373" width="131" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="galactic"/>
+                                <connections>
+                                    <segue destination="qh1-Dp-NRb" kind="presentation" identifier="darkSide" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="sCi-Il-uvH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzw-s9-Mdw">
+                                <rect key="frame" x="285" y="338" width="44" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="2xM-6h-XSB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="64v-SF-AiZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78q-S9-hIe">
+                                <rect key="frame" x="91" y="338" width="46" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="6dk-c7-i0G"/>
+                                    <constraint firstAttribute="height" constant="28" id="hpk-70-wT3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8mt-CY-rZ8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TjW-Uj-UXE"/>
+                            <constraint firstItem="8mt-CY-rZ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vgd-0z-qVs"/>
+                            <constraint firstAttribute="bottom" secondItem="8mt-CY-rZ8" secondAttribute="bottom" id="X0z-Pe-poO"/>
+                            <constraint firstItem="Nzw-s9-Mdw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="294" id="bh0-NN-FXl"/>
+                            <constraint firstItem="Nzw-s9-Mdw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="78q-S9-hIe" secondAttribute="trailing" constant="8" symbolic="YES" id="fFO-Jr-yfq"/>
+                            <constraint firstItem="78q-S9-hIe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="jAf-4P-Tv0"/>
+                            <constraint firstItem="PGA-9s-zyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWz-vs-9Yo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nzw-s9-Mdw" secondAttribute="trailing" constant="85" id="r3y-yA-Ceb"/>
+                            <constraint firstItem="78q-S9-hIe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="294" id="urC-PI-qeU"/>
+                            <constraint firstItem="8mt-CY-rZ8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xzh-R3-xK0"/>
+                            <constraint firstItem="PGA-9s-zyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="243" id="zDV-mM-TZk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="124.55357142857142"/>
+        </scene>
+        <!--Chosen SideVC-->
+        <scene sceneID="17W-bN-Njr">
+            <objects>
+                <viewController id="qh1-Dp-NRb" customClass="ChosenSideVC" customModule="Choose_Your_Side" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2gj-KX-o5q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vB-ch-KUe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-qQ-ghR">
+                                <rect key="frame" x="66" y="689" width="282" height="51"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Choose A Side">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="2eW-MX-aKq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3vB-ch-KUe" firstAttribute="leading" secondItem="jfY-b1-2FJ" secondAttribute="leading" id="7Yw-r8-Z1w"/>
+                            <constraint firstItem="3vB-ch-KUe" firstAttribute="top" secondItem="2gj-KX-o5q" secondAttribute="top" id="Q4e-4I-yXa"/>
+                            <constraint firstAttribute="bottom" secondItem="3vB-ch-KUe" secondAttribute="bottom" id="e0y-gZ-KEU"/>
+                            <constraint firstItem="hkR-qQ-ghR" firstAttribute="leading" secondItem="jfY-b1-2FJ" secondAttribute="leading" constant="66" id="kH1-Ja-Ndn"/>
+                            <constraint firstItem="3vB-ch-KUe" firstAttribute="trailing" secondItem="jfY-b1-2FJ" secondAttribute="trailing" id="vZm-CM-cI3"/>
+                            <constraint firstItem="hkR-qQ-ghR" firstAttribute="centerX" secondItem="3vB-ch-KUe" secondAttribute="centerX" id="vbf-WQ-cWZ"/>
+                            <constraint firstItem="hkR-qQ-ghR" firstAttribute="top" secondItem="jfY-b1-2FJ" secondAttribute="top" constant="645" id="zJZ-9b-aYR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jfY-b1-2FJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseBtn" destination="hkR-qQ-ghR" id="P7P-Pq-h7y"/>
+                        <outlet property="sideImage" destination="3vB-ch-KUe" id="FaO-ge-dAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Dx-gq-Iw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="124.55357142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rj6-bO-R9L"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="galactic" width="1024" height="1023"/>
+        <image name="rebel" width="570" height="708"/>
+        <image name="starWars" width="1536" height="2732"/>
+    </resources>
 </document>
